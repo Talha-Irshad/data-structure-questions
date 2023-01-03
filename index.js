@@ -58,8 +58,25 @@ const digonalSum = (arr) => {
   console.log('secondDiagonalSum', secondDiagonalSum);
 };
 
-digonalSum([
-  [10, 12, 14],
-  [9, 8, 2],
-  [5, 2, 1],
-]);
+// digonalSum([
+//   [10, 12, 14],
+//   [9, 8, 2],
+//   [5, 2, 1],
+// ]);
+
+function addDigits(num) {
+  let sum = 0;
+  while (num) {
+    sum += num % 10;
+    num = Math.floor(num / 10);
+  }
+  return sum;
+}
+
+function convertToNumber(str) {
+  let num = 0;
+  for (let i = 0; i < str.length; i++) {
+    num = num * 10 + (str.charCodeAt(i) - 48);
+  }
+  return num;
+}
