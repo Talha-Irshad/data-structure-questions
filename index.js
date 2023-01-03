@@ -42,4 +42,24 @@ const getSecondLargest = (arr) => {
   console.log('second largest: ', secondLargest);
 };
 
-getSecondLargest([10, 122, 12, 1444, 100]);
+// getSecondLargest([10, 122, 12, 188, 1444, 100]);
+
+// diagonal sum
+const digonalSum = (arr) => {
+  let firstDiagonalSum = 0;
+  let secondDiagonalSum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr.length == arr[i].length) {
+      firstDiagonalSum = firstDiagonalSum + arr[i][i];
+      secondDiagonalSum = secondDiagonalSum + arr[i][arr.length - i - 1];
+    }
+  }
+  console.log('firstDiagonalSum', firstDiagonalSum);
+  console.log('secondDiagonalSum', secondDiagonalSum);
+};
+
+digonalSum([
+  [10, 12, 14],
+  [9, 8, 2],
+  [5, 2, 1],
+]);
