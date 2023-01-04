@@ -91,6 +91,4 @@ function reverseArray(arr) {
   console.log(reverseArr);
 }
 
-reverseArray([10, 12, 41, 21]);
-
-console.log(['10', '12', '41', '21'].slice(0, 3).join(''));
+// reverseArray([10, 12, 41, 21]);
