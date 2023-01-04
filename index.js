@@ -80,3 +80,17 @@ function convertToNumber(str) {
   }
   return num;
 }
+
+function reverseArray(arr) {
+  let reverseArr = [...arr];
+  for (let i = 0; i < Math.floor(reverseArr.length / 2); i++) {
+    let temp = reverseArr[i];
+    reverseArr[i] = reverseArr[reverseArr.length - i - 1];
+    reverseArr[reverseArr.length - i - 1] = temp;
+  }
+  console.log(reverseArr);
+}
+
+reverseArray([10, 12, 41, 21]);
+
+console.log(['10', '12', '41', '21'].slice(0, 3).join(''));
