@@ -92,3 +92,19 @@ function reverseArray(arr) {
 }
 
 // reverseArray([10, 12, 41, 21]);
+
+function miniMaxSum(arr) {
+  // Write your code here
+  let arrSums = [];
+  for (let i = 0; i < arr.length; i++) {
+    let tempArr = [...arr];
+    tempArr.splice(i, 1);
+    let temp = tempArr.reduce((a, b) => a + b, 0);
+    arrSums.push(temp);
+  }
+  let min = Math.min(...arrSums);
+  let max = Math.max(...arrSums);
+  console.log(min, max);
+}
+
+miniMaxSum([5, 5, 5, 5]);
