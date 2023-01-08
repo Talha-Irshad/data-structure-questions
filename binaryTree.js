@@ -18,7 +18,6 @@ class BinarySearchTree {
       this.root = newNode;
     } else {
       let currentNode = this.root;
-      debugger;
       while (true) {
         if (value < currentNode.value) {
           if (currentNode.left === null) {
